@@ -1,0 +1,11 @@
+# hostname intel-pve
+# vi /etc/hosts (reflect your new hostname e.g. intel-pve)
+# vi /etc/hostname (reflect your new hostname e.g. intel-pve)
+# cp -p /var/lib/rrdcached/db/pve2-node/proxmox /var/lib/rrdcached/db/pve2-node/intel-pve
+# cp -p /var/lib/rrdcached/db/pve2-storage/proxmox/* /var/lib/rrdcached/db/pve2-storage/intel-pve
+# service pve-cluster stop && pmxcfs --local
+# mv /etc/pve/nodes/proxmox/qemu-server/* /etc/pve/nodes/intel-pve/qemu-server
+# rm -Rf /etc/pve/nodes/proxmox
+# rm -Rf /var/lib/rrdcached/db/pve2-node/proxmox
+# rm -Rf /var/lib/rrdcached/db/pve2-storage/proxmox
+# reboot
