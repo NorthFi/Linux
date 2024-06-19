@@ -1,0 +1,4 @@
+# To clean some packages laying around
+sudo apt-get autoremove
+sudo apt-get clean
+sudo apt-get autoclean
